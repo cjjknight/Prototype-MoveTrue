@@ -12,8 +12,29 @@ struct HomeView: View {
     @EnvironmentObject var model: ContentModel
     
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        TabView {
+            Text("The Home Page")
+                .tabItem {
+                    Text("Home")
+                }
+            Text("The Seminar Page")
+                .tabItem {
+                    Text("Seminars")
+                }
+            Text("The Fullbody Page")
+                .tabItem {
+                    Text("Fullbody")
+                }
+            Text("The Flexibility Page")
+                .tabItem {
+                    Text("Flexibility")
+                }
+            Text("The Calendar of Events")
+                .tabItem {
+                    Text("Calendar")
+                }
+        }
     }
 }
 
