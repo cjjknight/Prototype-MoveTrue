@@ -52,7 +52,11 @@
 			isa = PBXGroup;
 			children = (
 				F031ED3F27A45F0B004E9A58 /* ProtoType_MoveTrueApp.swift */,
-				F031ED4127A45F0B004E9A58 /* ContentView.swift */,
+				F031ED4D27A45FC0004E9A58 /* Views */,
+				F031ED4E27A45FCC004E9A58 /* ViewModels */,
+				F031ED4F27A45FD9004E9A58 /* Models */,
+				F031ED5027A45FE9004E9A58 /* Resources */,
+				F031ED5127A45FF1004E9A58 /* Helpers */,
 				F031ED4327A45F0D004E9A58 /* Assets.xcassets */,
 				F031ED4527A45F0D004E9A58 /* Preview Content */,
 			);
@@ -65,6 +69,42 @@
 				F031ED4627A45F0D004E9A58 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F031ED4D27A45FC0004E9A58 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F031ED4E27A45FCC004E9A58 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F031ED4127A45F0B004E9A58 /* ContentView.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F031ED4F27A45FD9004E9A58 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F031ED5027A45FE9004E9A58 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F031ED5127A45FF1004E9A58 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
