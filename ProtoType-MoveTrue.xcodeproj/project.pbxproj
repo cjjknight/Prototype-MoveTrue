@@ -8,19 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		F031ED4027A45F0B004E9A58 /* ProtoType_MoveTrueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F031ED3F27A45F0B004E9A58 /* ProtoType_MoveTrueApp.swift */; };
-		F031ED4227A45F0B004E9A58 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F031ED4127A45F0B004E9A58 /* HomeView.swift */; };
+		F031ED4227A45F0B004E9A58 /* TabHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F031ED4127A45F0B004E9A58 /* TabHomeView.swift */; };
 		F031ED4427A45F0D004E9A58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F031ED4327A45F0D004E9A58 /* Assets.xcassets */; };
 		F031ED4727A45F0D004E9A58 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F031ED4627A45F0D004E9A58 /* Preview Assets.xcassets */; };
 		F031ED5327A46159004E9A58 /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F031ED5227A46159004E9A58 /* ContentModel.swift */; };
+		F095006227A48EF600F6D1F2 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F095006127A48EF600F6D1F2 /* WelcomeView.swift */; };
+		F095006527A4961D00F6D1F2 /* style.html in Resources */ = {isa = PBXBuildFile; fileRef = F095006427A4961D00F6D1F2 /* style.html */; };
+		F095006727A4962700F6D1F2 /* FormattedText.json in Resources */ = {isa = PBXBuildFile; fileRef = F095006627A4962700F6D1F2 /* FormattedText.json */; };
+		F095006927A496DA00F6D1F2 /* FormattedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F095006827A496DA00F6D1F2 /* FormattedText.swift */; };
+		F095006B27A497B400F6D1F2 /* CodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F095006A27A497B400F6D1F2 /* CodeTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F031ED3C27A45F0B004E9A58 /* ProtoType-MoveTrue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ProtoType-MoveTrue.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F031ED3F27A45F0B004E9A58 /* ProtoType_MoveTrueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtoType_MoveTrueApp.swift; sourceTree = "<group>"; };
-		F031ED4127A45F0B004E9A58 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		F031ED4127A45F0B004E9A58 /* TabHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabHomeView.swift; sourceTree = "<group>"; };
 		F031ED4327A45F0D004E9A58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F031ED4627A45F0D004E9A58 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F031ED5227A46159004E9A58 /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
+		F095006127A48EF600F6D1F2 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		F095006427A4961D00F6D1F2 /* style.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = style.html; path = "../../../iOS Foundations 2021/Module 5/Lesson 03/M5L3 Resources/data/style.html"; sourceTree = "<group>"; };
+		F095006627A4962700F6D1F2 /* FormattedText.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = FormattedText.json; path = "../../../iOS Foundations 2021/Module 5/Lesson 03/M5L3 Resources/data/FormattedText.json"; sourceTree = "<group>"; };
+		F095006827A496DA00F6D1F2 /* FormattedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattedText.swift; sourceTree = "<group>"; };
+		F095006A27A497B400F6D1F2 /* CodeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +69,7 @@
 				F031ED4F27A45FD9004E9A58 /* Models */,
 				F031ED5027A45FE9004E9A58 /* Resources */,
 				F031ED5127A45FF1004E9A58 /* Helpers */,
+				F095006327A4954200F6D1F2 /* Data */,
 				F031ED4327A45F0D004E9A58 /* Assets.xcassets */,
 				F031ED4527A45F0D004E9A58 /* Preview Content */,
 			);
@@ -76,7 +87,9 @@
 		F031ED4D27A45FC0004E9A58 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F031ED4127A45F0B004E9A58 /* HomeView.swift */,
+				F031ED4127A45F0B004E9A58 /* TabHomeView.swift */,
+				F095006127A48EF600F6D1F2 /* WelcomeView.swift */,
+				F095006A27A497B400F6D1F2 /* CodeTextView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -92,6 +105,7 @@
 		F031ED4F27A45FD9004E9A58 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F095006827A496DA00F6D1F2 /* FormattedText.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -108,6 +122,15 @@
 			children = (
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F095006327A4954200F6D1F2 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F095006627A4962700F6D1F2 /* FormattedText.json */,
+				F095006427A4961D00F6D1F2 /* style.html */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,8 +191,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F095006527A4961D00F6D1F2 /* style.html in Resources */,
 				F031ED4727A45F0D004E9A58 /* Preview Assets.xcassets in Resources */,
 				F031ED4427A45F0D004E9A58 /* Assets.xcassets in Resources */,
+				F095006727A4962700F6D1F2 /* FormattedText.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,9 +205,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F031ED4227A45F0B004E9A58 /* HomeView.swift in Sources */,
+				F095006B27A497B400F6D1F2 /* CodeTextView.swift in Sources */,
+				F031ED4227A45F0B004E9A58 /* TabHomeView.swift in Sources */,
 				F031ED4027A45F0B004E9A58 /* ProtoType_MoveTrueApp.swift in Sources */,
 				F031ED5327A46159004E9A58 /* ContentModel.swift in Sources */,
+				F095006227A48EF600F6D1F2 /* WelcomeView.swift in Sources */,
+				F095006927A496DA00F6D1F2 /* FormattedText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

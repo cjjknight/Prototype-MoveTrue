@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct HomeView: View {
+struct TabHomeView: View {
     
     @EnvironmentObject var model: ContentModel
     
     var body: some View {
         
         TabView {
-            Text("The Home Page")
+            WelcomeView()
                 .tabItem {
                     Text("Home")
                 }
@@ -38,8 +38,8 @@ struct HomeView: View {
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
+struct TabHomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        TabHomeView()
     }
 }

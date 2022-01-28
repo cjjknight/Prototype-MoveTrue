@@ -11,7 +11,7 @@ import SwiftUI
 struct ProtoType_MoveTrueApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            TabHomeView()
                 .environmentObject(ContentModel())
         }
     }
