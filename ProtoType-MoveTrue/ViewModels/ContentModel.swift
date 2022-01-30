@@ -10,28 +10,21 @@ import Foundation
 class ContentModel: ObservableObject {
     
     //List of Modules
-    @Published var formattedText = [FormattedText]()
-
-    // Current Text in HTML Formatting
+    @Published var modules = [Module]()
+    
+    
+    // Current module
+    @Published var currentModule: Module?
+    var currentModuleIndex = 0
+    
+    //  Formatted Text
     @Published var codeText = NSAttributedString()
     var styleData: Data?
-    
-    //Current Text
-    @Published var currentText: String?
-    
     init() {
         
         getLocalData()
-        openTabView()
-            
-    }
-    
-    // MARK: - Tab Navigation
-    
-    func openTabView() {
-     
-        currentText = formattedText[0].explanation
-        codeText = addStyling(currentText!)
+       // getRemoteData()
+        
     }
     
     // MARK: - Data Methods
@@ -40,17 +33,17 @@ class ContentModel: ObservableObject {
     func getLocalData() {
         
         //get a url to the json file
-        let jsonUrl = Bundle.main.url(forResource: "FormattedText", withExtension: "json")
+        let jsonUrl = Bundle.main.url(forResource: "data", withExtension: "json")
         
         do {
             // read the file into a data object
             let jsonData = try Data(contentsOf: jsonUrl!)
             // try to decode the json into an array of modules
             let jsonDecoder = JSONDecoder()
-            let formattedText = try jsonDecoder.decode([FormattedText].self, from: jsonData)
+            let modules = try jsonDecoder.decode([Module].self, from: jsonData)
             
             // Assign parsed modules to modules propetry
-            self.formattedText = formattedText
+            self.modules = modules
             
         }
         catch {
@@ -75,7 +68,74 @@ class ContentModel: ObservableObject {
         }
     }
     
+    func getRemoteData() {
+       
+        // String path
+        let urlString = "https://cjjknight.github.io/cwc-learningappdata/data2.json"  // [To Be Replaced with proper link]
+        
+       // Create a URL object
+        let url = URL(string: urlString)
+        
+        guard url != nil else {
+            // cound't create url
+            return
+        }
+        
+        //create a URLRequest object
+        let request = URLRequest(url: url!)
+        
+        // Get the session and kick off the task
+        let session = URLSession.shared
+        
+        let dataTask = session.dataTask(with: request) { (data, response, error) in
+            
+            // Check if there is an eroor
+            guard error == nil else {
+                // There was an error
+                return
+            }
+            
+            do {
+            
+                // Create json decoder
+                let decoder = JSONDecoder()
+                
+                //Decode
+                let modules = try decoder.decode([Module].self, from: data!)
+                
+                // Appen parsed modules into modules property
+                self.modules += modules
+                
+            }
+            catch {
+                print("Couldn't parse remote data")
+            }
+            
+        }
+        
+        //Kick off data task
+        dataTask.resume()
+        
+        
+    }
     
+    
+    
+    // MARK: - Module navigation methods
+    
+    func beginModule(_ moduleid:Int) {
+        
+        // Find the index for this module id
+        for index in 0..<modules.count {
+            if modules[index].id == moduleid {
+                currentModuleIndex = index
+                break
+            }
+        }
+        
+        // set the current Module
+        currentModule = modules[currentModuleIndex]
+    }
     
     
     
@@ -104,5 +164,9 @@ class ContentModel: ObservableObject {
         return resultString
     }
     
-    
 }
+
+
+    
+    
+    

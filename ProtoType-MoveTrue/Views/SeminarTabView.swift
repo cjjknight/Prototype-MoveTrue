@@ -29,18 +29,6 @@ struct SeminarTabView: View {
                 Spacer()
              
                         
-                    HStack{
-                        
-                        Image("AboutImage_1")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 200, alignment: .leading)
-                            .clipped()
-                            .cornerRadius(5)
-                        
-                         //CodeTextView()
-                        Text("About Text Here")
-                    }
                 
                 Spacer()
             } // VStack Close

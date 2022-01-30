@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Modules: Identifiable, Decodable {
+class Module: Identifiable, Decodable {
     
     var id:Int
     var category:String
