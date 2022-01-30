@@ -24,9 +24,12 @@ struct TabHomeView: View {
                     .tabItem {
                         Text("Home")
                     }
-                Text("The Seminar Page")
+                SeminarTabView()
                     .tabItem {
-                        Text("Seminars")
+                        VStack{
+                            Image(systemName: "list.bullet")
+                            Text("Seminars")
+                        }
                     }
                 Text("The Fullbody Page")
                     .tabItem {
@@ -40,7 +43,9 @@ struct TabHomeView: View {
                     .tabItem {
                         Text("Calendar")
                     }
+                    
             }
+            
         }
     }
 }
