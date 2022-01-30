@@ -15,16 +15,37 @@ import SwiftUI
     
         var body: some View {
             
-            HStack{
+            ZStack {
                 
-                Image("AboutImage_1")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 200, height: 900)
-                    .clipped()
-                    .cornerRadius(5)
+                Image("MoveTrueBackground")
+                     .resizable()
+                     .ignoresSafeArea()
+                     .scaledToFill()
                 
-                 CodeTextView()
+                VStack{
+                    
+                    
+                    Image("MoveTrueLogo")
+            
+
+                    Spacer()
+                 
+                            
+                        HStack{
+                            
+                            Image("AboutImage_1")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 200, alignment: .leading)
+                                .clipped()
+                                .cornerRadius(5)
+                            
+                             //CodeTextView()
+                            Text("About Text Here")
+                        }
+                    
+                    Spacer()
+                } // VStack Close
             }
         }
     }

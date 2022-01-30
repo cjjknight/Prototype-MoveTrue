@@ -13,27 +13,34 @@ struct TabHomeView: View {
     
     var body: some View {
         
-        TabView {
-            WelcomeView()
-                .tabItem {
-                    Text("Home")
-                }
-            Text("The Seminar Page")
-                .tabItem {
-                    Text("Seminars")
-                }
-            Text("The Fullbody Page")
-                .tabItem {
-                    Text("Fullbody")
-                }
-            Text("The Flexibility Page")
-                .tabItem {
-                    Text("Flexibility")
-                }
-            Text("The Calendar of Events")
-                .tabItem {
-                    Text("Calendar")
-                }
+        ZStack{
+            
+        
+
+            
+            
+            TabView {
+                WelcomeView()
+                    .tabItem {
+                        Text("Home")
+                    }
+                Text("The Seminar Page")
+                    .tabItem {
+                        Text("Seminars")
+                    }
+                Text("The Fullbody Page")
+                    .tabItem {
+                        Text("Fullbody")
+                    }
+                Text("The Flexibility Page")
+                    .tabItem {
+                        Text("Flexibility")
+                    }
+                Text("The Calendar of Events")
+                    .tabItem {
+                        Text("Calendar")
+                    }
+            }
         }
     }
 }
