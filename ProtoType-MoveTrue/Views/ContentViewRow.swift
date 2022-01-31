@@ -21,11 +21,8 @@ struct ContentViewRow: View {
         ZStack (alignment: .leading) {
             
         
-            Rectangle()
-                .foregroundColor(.white)
-                .cornerRadius(10)
-                .shadow(radius: 5)
-                .frame(height: 66)
+            RectangleCard(color: .white)
+           
             
             HStack ( spacing: 30) {
                 

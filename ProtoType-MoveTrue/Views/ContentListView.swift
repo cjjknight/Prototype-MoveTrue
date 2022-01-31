@@ -7,10 +7,12 @@
 
 import SwiftUI
 
-struct SeminarTabView: View {
+struct ContentListView: View {
     
     @EnvironmentObject var model: ContentModel
 
+    var contentCategory:String
+    
     var body: some View {
         
         ZStack {
@@ -37,19 +39,20 @@ struct SeminarTabView: View {
                         
                             ForEach(0..<model.modules.count) { index in
                                 
-                               // NavigationLink(
-                                 //   destination:
-                                       // ContentDetailView()
-                                        //.onAppear(perform: {
-                                       //     model.beginLesson(index)
-                                   
-                                 //   ),
-                                //    label: {
-                                        ContentViewRow(index: index)
-                               //     })
-                                
-                                
-                                
+                                if model.modules[index].category == contentCategory {
+                                    
+                                   // NavigationLink(
+                                     //   destination:
+                                           // ContentDetailView()
+                                            //.onAppear(perform: {
+                                           //     model.beginLesson(index)
+                                       
+                                     //   ),
+                                    //    label: {
+                                            ContentViewRow(index: index)
+                                   //     })
+                                }
+
                             }//ForEach Close
                         } // Close If statement about currentModule exisiting
                     } //Lazy VStack Close
@@ -68,10 +71,4 @@ struct SeminarTabView: View {
         }
     }
 
-}
-
-struct SeminarTabView_Previews: PreviewProvider {
-    static var previews: some View {
-        SeminarTabView()
-    }
 }

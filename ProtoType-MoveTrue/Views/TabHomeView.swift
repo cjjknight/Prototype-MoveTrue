@@ -27,21 +27,21 @@ struct TabHomeView: View {
                             Text("Welcome")
                         }
                     }
-                SeminarTabView()
+                ContentListView(contentCategory: "Seminar")
                     .tabItem {
                         VStack{
                             Image(systemName: "list.bullet")
                             Text("Seminars")
                         }
                     }
-                Text("The Fullbody Page")
+                ContentListView(contentCategory: "FullBody")
                     .tabItem {
                         VStack{
                             Image(systemName: "figure.walk")
                             Text("Fullbody")
                         }
                     }
-                Text("The Flexibility Page")
+                ContentListView(contentCategory: "Flexibility")
                     .tabItem {
                         VStack {
                             Image(systemName: "figure.wave")
