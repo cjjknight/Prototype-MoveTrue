@@ -10,12 +10,13 @@ import SwiftUI
 struct RectangleCard: View {
     
     var color:Color
+    var sizeHeight:Double
     
     var body: some View {
         
         Rectangle()
             .foregroundColor(color)
-            .frame(height: 48)
+            .frame(height: sizeHeight)
             .cornerRadius(10)
             .shadow(radius:5)
         

@@ -21,6 +21,7 @@ class ContentModel: ObservableObject {
     @Published var codeText = NSAttributedString()
     var styleData: Data?
     
+
     
     init() {
         

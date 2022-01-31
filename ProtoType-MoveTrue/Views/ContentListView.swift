@@ -49,7 +49,7 @@ struct ContentListView: View {
                                        
                                      //   ),
                                     //    label: {
-                                            ContentViewRow(index: index)
+                                    ContentViewRow(index: index, contentCategory: contentCategory)
                                    //     })
                                 }
 

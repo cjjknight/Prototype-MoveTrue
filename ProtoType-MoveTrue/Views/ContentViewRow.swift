@@ -11,7 +11,7 @@ struct ContentViewRow: View {
   
     @EnvironmentObject var model: ContentModel
     var index: Int
-    
+    var contentCategory: String
     
     
     var body: some View {
@@ -21,8 +21,8 @@ struct ContentViewRow: View {
         ZStack (alignment: .leading) {
             
         
-            RectangleCard(color: .white)
-           
+            if contentCategory == "Seminar" {RectangleCard(color: .green, sizeHeight: 68)}
+            else {RectangleCard(color: .white, sizeHeight: 48)}
             
             HStack ( spacing: 30) {
                 
