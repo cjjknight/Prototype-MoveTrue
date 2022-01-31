@@ -20,6 +20,8 @@ class ContentModel: ObservableObject {
     //  Formatted Text
     @Published var codeText = NSAttributedString()
     var styleData: Data?
+    
+    
     init() {
         
         getLocalData()

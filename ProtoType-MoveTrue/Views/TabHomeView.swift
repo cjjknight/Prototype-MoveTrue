@@ -22,7 +22,10 @@ struct TabHomeView: View {
             TabView {
                 WelcomeView()
                     .tabItem {
-                        Text("Home")
+                        VStack {
+                            Image(systemName: "star")
+                            Text("Welcome")
+                        }
                     }
                 SeminarTabView()
                     .tabItem {
@@ -33,19 +36,27 @@ struct TabHomeView: View {
                     }
                 Text("The Fullbody Page")
                     .tabItem {
-                        Text("Fullbody")
+                        VStack{
+                            Image(systemName: "figure.walk")
+                            Text("Fullbody")
+                        }
                     }
                 Text("The Flexibility Page")
                     .tabItem {
-                        Text("Flexibility")
+                        VStack {
+                            Image(systemName: "figure.wave")
+                            Text("Flexibility")
+                        }
                     }
                 Text("The Calendar of Events")
                     .tabItem {
-                        Text("Calendar")
+                        VStack{
+                            Image(systemName: "calendar")
+                            Text("Calendar")
+                        }
                     }
                     
-            }
-            
+            }.environmentObject(ContentModel())
         }
     }
 }

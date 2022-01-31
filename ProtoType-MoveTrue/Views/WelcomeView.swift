@@ -11,7 +11,7 @@ import SwiftUI
 
     struct WelcomeView: View {
         
-        @EnvironmentObject var formattedText: ContentModel
+        @EnvironmentObject var model: ContentModel
     
         var body: some View {
             

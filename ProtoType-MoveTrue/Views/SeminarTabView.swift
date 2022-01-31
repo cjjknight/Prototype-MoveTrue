@@ -9,16 +9,16 @@ import SwiftUI
 
 struct SeminarTabView: View {
     
-    @EnvironmentObject var formattedText: ContentModel
+    @EnvironmentObject var model: ContentModel
 
     var body: some View {
         
         ZStack {
             
-            Image("MoveTrueBackground")
-                 .resizable()
-                 .ignoresSafeArea()
-                 .scaledToFill()
+           // Image("MoveTrueBackground")
+            //    .resizable()
+            //    .ignoresSafeArea()
+             //   .scaledToFill()
             
             VStack{
                 
@@ -28,7 +28,40 @@ struct SeminarTabView: View {
 
                 Spacer()
              
+                ScrollView {
+                    
+                    LazyVStack {
                         
+                        // Confimm that currentModule is set
+                        if model.modules.count != nil {
+                        
+                            ForEach(0..<model.modules.count) { index in
+                                
+                               // NavigationLink(
+                                 //   destination:
+                                       // ContentDetailView()
+                                        //.onAppear(perform: {
+                                       //     model.beginLesson(index)
+                                   
+                                 //   ),
+                                //    label: {
+                                        ContentViewRow(index: index)
+                               //     })
+                                
+                                
+                                
+                            }//ForEach Close
+                        } // Close If statement about currentModule exisiting
+                    } //Lazy VStack Close
+                    .padding()
+                    .accentColor(.black)
+                    //.navigationBarTitle("Learn \(model.currentModule?.category ?? "")")
+                    
+                } //ScrollView Close
+                .zIndex(1)
+                
+                
+                
                 
                 Spacer()
             } // VStack Close
