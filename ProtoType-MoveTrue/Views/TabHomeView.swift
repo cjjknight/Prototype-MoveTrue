@@ -50,7 +50,7 @@ struct TabHomeView: View {
                                         Text("Flexibility")
                                     }
                                 }
-                            Text("The Calendar of Events")
+                            ContentListView(contentCategory: "Calendar")
                                 .tabItem {
                                     VStack{
                                         Image(systemName: "calendar")

@@ -12,17 +12,19 @@ struct ContentViewRow: View {
     @EnvironmentObject var model: ContentModel
     var index: Int
     var contentCategory: String
+   
     
+    let currentDateTime = Date()
     
     var body: some View {
- 
         
         // Content Card
         ZStack (alignment: .leading) {
             
         
-            if contentCategory == "Seminar" {RectangleCard(color: .white, sizeHeight: 88)}
-            else {RectangleCard(color: .gray, sizeHeight: 48)}
+            if contentCategory == "Seminar" {RectangleCard(color: .green, sizeHeight: 88)}
+            else  if contentCategory == "Calendar" {RectangleCard(color: .white, sizeHeight: 88)}
+            else {RectangleCard(color: .blue, sizeHeight: 48)}
             
             HStack ( spacing: 30) {
                 
@@ -30,12 +32,21 @@ struct ContentViewRow: View {
                     .bold()
                 
                 VStack (alignment: .leading){
-                    Text(model.modules[index].title)
-                        .bold()
+                    if contentCategory == "Calendar" {Text(model.modules[index].category + ": " + (model.modules[index].title)).bold()}
+                    else {Text(model.modules[index].title).bold()}
                     Text(model.modules[index].length)
-                    if contentCategory == "Seminar" {
-                        Text("Description: " + model.modules[index].description)
-                    }
+                    if model.modules[index].category == "Seminar" {
+                        Text("Description: " + model.modules[index].description)}
+                    if contentCategory == "Calendar" {
+                        HStack {
+                            Text(Rational.converterDateTime(model, index), style: .date)
+                            Text(" at ")
+                            Text(Rational.converterDateTime(model, index), style: .time)
+                            Text(model.modules[index].timezone)
+                        }
+                        }
+                        
+                    
                
                 } // VStack Close
             } // HStack Close

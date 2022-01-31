@@ -12,6 +12,7 @@ struct ContentListView: View {
     @EnvironmentObject var model: ContentModel
 
     var contentCategory:String
+    let currentDateTime = Date()
     
     var body: some View {
         
@@ -34,9 +35,11 @@ struct ContentListView: View {
                         
                             ForEach(0..<model.modules.count) { index in
                                 
-                                if model.modules[index].category == contentCategory {
-                                    
-                                    if model.modules[index].category == contentCategory {
+                            
+                                    // Seminar, Lesson and Flexibility List
+                                    if model.modules[index].category == contentCategory &&
+                                        currentDateTime > Rational.converterDateTime(model, index)
+                                    {
                                         
                                         NavigationLink(
                                             destination:
@@ -46,8 +49,28 @@ struct ContentListView: View {
                                         ContentViewRow(index: index, contentCategory: contentCategory)
                                             })
                                     }
+                                
+                                // Calendar List
+                                if contentCategory == "Calendar" &&
+                                    currentDateTime < Rational.converterDateTime(model, index)
+                                {
+                                    
+                                    NavigationLink(
+                                        destination:
+                                            Text("TBD")
+                                        ,
+                                        label: {
+                                    ContentViewRow(index: index, contentCategory: contentCategory)
+                                        })
                                 }
                             }//ForEach Close
+                            
+                            
+                            
+                            
+                            
+                            
+                            
                         } // Close If statement about currentModule exisiting
                     } //Lazy VStack Close
                     .padding()
