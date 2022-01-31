@@ -17,18 +17,13 @@ struct ContentListView: View {
         
         ZStack {
             
-           Image("MoveTrueBackground")
-                .resizable()
-               .ignoresSafeArea()
+            MoveTrueBackground()
         
             
             VStack{
                 
                 
-                Image("MoveTrueLogo")
-        
 
-                Spacer()
              
                 ScrollView {
                     

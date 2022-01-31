@@ -22,6 +22,7 @@
 		F095006B27A497B400F6D1F2 /* CodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F095006A27A497B400F6D1F2 /* CodeTextView.swift */; };
 		F0953C3127A84B5F00EEA5FA /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0953C3027A84B5F00EEA5FA /* ContentDetailView.swift */; };
 		F0953C3327A84CC000EEA5FA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0953C3227A84CC000EEA5FA /* Constants.swift */; };
+		F0953C3527A8573E00EEA5FA /* MoveTrueBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0953C3427A8573E00EEA5FA /* MoveTrueBackground.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		F095006A27A497B400F6D1F2 /* CodeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextView.swift; sourceTree = "<group>"; };
 		F0953C3027A84B5F00EEA5FA /* ContentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailView.swift; sourceTree = "<group>"; };
 		F0953C3227A84CC000EEA5FA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F0953C3427A8573E00EEA5FA /* MoveTrueBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveTrueBackground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				F031ED4127A45F0B004E9A58 /* TabHomeView.swift */,
+				F0953C3427A8573E00EEA5FA /* MoveTrueBackground.swift */,
 				F047F98327A61F51007D83E0 /* ContentListView.swift */,
 				F095006127A48EF600F6D1F2 /* WelcomeView.swift */,
 				F095006A27A497B400F6D1F2 /* CodeTextView.swift */,
@@ -230,6 +233,7 @@
 				F0799C4527A7552F009291A3 /* ContentViewRow.swift in Sources */,
 				F047F98227A61E69007D83E0 /* Module.swift in Sources */,
 				F095006227A48EF600F6D1F2 /* WelcomeView.swift in Sources */,
+				F0953C3527A8573E00EEA5FA /* MoveTrueBackground.swift in Sources */,
 				F0799C4227A754F0009291A3 /* Rectangle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

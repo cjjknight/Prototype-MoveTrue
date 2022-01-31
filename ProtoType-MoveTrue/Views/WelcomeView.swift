@@ -9,47 +9,33 @@ import SwiftUI
 
 
 
-    struct WelcomeView: View {
-        
-        @EnvironmentObject var model: ContentModel
+struct WelcomeView: View {
     
-        var body: some View {
+    @EnvironmentObject var model: ContentModel
+    
+    var body: some View {
+        
+        ZStack {
             
-            ZStack {
+            MoveTrueBackground()
+            
+            VStack{
                 
-                Image("MoveTrueBackground")
-                     .resizable()
-                     .ignoresSafeArea()
-           
-                VStack{
-                    
-                    
-                    Image("MoveTrueLogo")
-            
+                Image("AboutImage_2")
+                    .resizable()
+                    .scaledToFit()
+                    .clipped()
+                    .cornerRadius(5)
+                    .border(.black)
+                
+                CodeTextView()
+                    .padding(.bottom, 110)
+                
+                
 
-                    Spacer()
-                 
-                            
-                        VStack{
-                            
-                            Image("AboutImage_2")
-                                .resizable()
-                                .scaledToFit()
-                                .clipped()
-                                .cornerRadius(5)
-                            
-                            CodeTextView()
-                            //Text("About Text Here")
-                        }
-                    
-                    Spacer()
-                } // VStack Close
-            }
+            } // VStack Close
+            .ignoresSafeArea()
         }
     }
+}
 
-    struct WelcomeView_Previews: PreviewProvider {
-        static var previews: some View {
-            WelcomeView()
-        }
-    }
