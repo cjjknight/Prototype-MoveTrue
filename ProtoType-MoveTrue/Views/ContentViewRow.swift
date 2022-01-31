@@ -21,8 +21,8 @@ struct ContentViewRow: View {
         ZStack (alignment: .leading) {
             
         
-            if contentCategory == "Seminar" {RectangleCard(color: .green, sizeHeight: 68)}
-            else {RectangleCard(color: .white, sizeHeight: 48)}
+            if contentCategory == "Seminar" {RectangleCard(color: .white, sizeHeight: 88)}
+            else {RectangleCard(color: .gray, sizeHeight: 48)}
             
             HStack ( spacing: 30) {
                 
@@ -33,6 +33,10 @@ struct ContentViewRow: View {
                     Text(model.modules[index].title)
                         .bold()
                     Text(model.modules[index].length)
+                    if contentCategory == "Seminar" {
+                        Text("Description: " + model.modules[index].description)
+                    }
+               
                 } // VStack Close
             } // HStack Close
             .padding()
