@@ -14,5 +14,6 @@ class Module: Identifiable, Decodable {
     var title:String
     var length: String
     var description: String
+    var video: String
     
 }

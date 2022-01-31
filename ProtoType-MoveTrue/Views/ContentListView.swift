@@ -41,18 +41,17 @@ struct ContentListView: View {
                                 
                                 if model.modules[index].category == contentCategory {
                                     
-                                   // NavigationLink(
-                                     //   destination:
-                                           // ContentDetailView()
-                                            //.onAppear(perform: {
-                                           //     model.beginLesson(index)
-                                       
-                                     //   ),
-                                    //    label: {
-                                    ContentViewRow(index: index, contentCategory: contentCategory)
-                                   //     })
+                                    if model.modules[index].category == contentCategory {
+                                        
+                                        NavigationLink(
+                                            destination:
+                                                ContentDetailView(index: index)
+                                            ,
+                                            label: {
+                                        ContentViewRow(index: index, contentCategory: contentCategory)
+                                            })
+                                    }
                                 }
-
                             }//ForEach Close
                         } // Close If statement about currentModule exisiting
                     } //Lazy VStack Close
