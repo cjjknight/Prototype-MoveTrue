@@ -30,12 +30,11 @@ import SwiftUI
                     Spacer()
                  
                             
-                        HStack{
+                        VStack{
                             
-                            Image("AboutImage_1")
+                            Image("AboutImage_2")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 200, alignment: .leading)
                                 .clipped()
                                 .cornerRadius(5)
                             
