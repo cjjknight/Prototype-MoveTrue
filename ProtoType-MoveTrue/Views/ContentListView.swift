@@ -17,10 +17,10 @@ struct ContentListView: View {
         
         ZStack {
             
-           // Image("MoveTrueBackground")
-            //    .resizable()
-            //    .ignoresSafeArea()
-             //   .scaledToFill()
+           Image("MoveTrueBackground")
+                .resizable()
+               .ignoresSafeArea()
+        
             
             VStack{
                 
