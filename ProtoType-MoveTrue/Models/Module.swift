@@ -13,6 +13,12 @@ class Module: Identifiable, Decodable {
     var category:String
     var title:String
     var length: String
+    var year: Int
+    var month: Int
+    var day: Int
+    var timezone: String
+    var hour: Int
+    var minute: Int
     var description: String
     var video: String
     
