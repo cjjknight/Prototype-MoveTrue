@@ -52,7 +52,8 @@ struct ContentListView: View {
                                 
                                 // Calendar List
                                 if contentCategory == "Calendar" &&
-                                    currentDateTime < Rational.converterDateTime(model, index)
+                                    currentDateTime < Rational.converterDateTime(model, index) &&
+                                    model.modules[index].category != "Admin"
                                 {
                                     
                                     NavigationLink(
