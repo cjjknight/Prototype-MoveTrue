@@ -27,7 +27,7 @@ class ContentModel: ObservableObject {
         
         getLocalData()
        // getRemoteData()
-        
+        codeText = addStyling(modules[7].description)
     }
     
     // MARK: - Data Methods

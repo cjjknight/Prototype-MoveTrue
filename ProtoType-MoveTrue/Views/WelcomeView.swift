@@ -20,8 +20,7 @@ import SwiftUI
                 Image("MoveTrueBackground")
                      .resizable()
                      .ignoresSafeArea()
-                     .scaledToFill()
-                
+           
                 VStack{
                     
                     
@@ -40,8 +39,8 @@ import SwiftUI
                                 .clipped()
                                 .cornerRadius(5)
                             
-                             //CodeTextView()
-                            Text("About Text Here")
+                            CodeTextView()
+                            //Text("About Text Here")
                         }
                     
                     Spacer()
