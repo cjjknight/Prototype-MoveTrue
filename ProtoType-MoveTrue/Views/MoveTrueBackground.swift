@@ -10,7 +10,7 @@ import SwiftUI
 struct MoveTrueBackground: View {
     var body: some View {
         
-        Image("MoveTrueBackground")
+        Image("MoveTrue_Background")
             .resizable()
             .ignoresSafeArea()
     }

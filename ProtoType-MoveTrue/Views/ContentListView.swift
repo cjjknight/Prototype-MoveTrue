@@ -68,7 +68,6 @@ struct ContentListView: View {
 
                         } // Close If statement about currentModule exisiting
                     } //Lazy VStack Close
-                    .padding()
                     .accentColor(.black)
                     //.navigationBarTitle("Learn \(model.currentModule?.category ?? "")")
                     

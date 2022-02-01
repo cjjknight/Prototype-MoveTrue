@@ -22,10 +22,10 @@ struct ContentViewRow: View {
         // Content Card
         ZStack (alignment: .leading) {
             
-        
-            if contentCategory == "Seminar" {RectangleCard(color: .green, sizeHeight: 88)}
-            else  if contentCategory == "Calendar" {RectangleCard(color: .white, sizeHeight: 88)}
-            else {RectangleCard(color: .blue, sizeHeight: 48)}
+            RectangleCard(color: .white, sizeHeight: 88)
+            //if contentCategory == "Seminar" {RectangleCard(color: .white, sizeHeight: 88)}
+            //else  if contentCategory == "Calendar" {RectangleCard(color: .white, sizeHeight: 88)}
+            //else {RectangleCard(color: .white, sizeHeight: 88)}
             
             HStack ( spacing: 30) {
                 

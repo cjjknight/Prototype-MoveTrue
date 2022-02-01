@@ -17,40 +17,40 @@ struct TabHomeView: View {
             
             VStack{
                 
-                Image("MoveTrueLogo")
+                Image("MoveTrue_Logo")
                 
                 ZStack{
                     NavigationView{
                         TabView {
-                            WelcomeView(TopImage: "AboutImage_2")
+                            WelcomeView(TopImage: "MoveTrue_Welcome_1")
                                 .tabItem {
                                     VStack {
                                         Image(systemName: "star")
                                         Text("Welcome")
                                     }
                                 }
-                            ContentListView(contentCategory: "Seminar",TopImage: "AboutImage_2")
+                            ContentListView(contentCategory: "Seminar",TopImage: "MoveTrue_Seminar_1")
                                 .tabItem {
                                     VStack{
                                         Image(systemName: "list.bullet")
                                         Text("Seminars")
                                     }
                                 }
-                            ContentListView(contentCategory: "FullBody",TopImage: "AboutImage_2")
+                            ContentListView(contentCategory: "FullBody",TopImage: "MoveTrue_FullBody_1")
                                 .tabItem {
                                     VStack{
                                         Image(systemName: "figure.walk")
                                         Text("Fullbody")
                                     }
                                 }
-                            ContentListView(contentCategory: "Flexibility",TopImage: "AboutImage_2")
+                            ContentListView(contentCategory: "Flexibility",TopImage: "MoveTrue_Flexibility_1")
                                 .tabItem {
                                     VStack {
                                         Image(systemName: "figure.wave")
                                         Text("Flexibility")
                                     }
                                 }
-                            ContentListView(contentCategory: "Calendar",TopImage: "AboutImage_2")
+                            ContentListView(contentCategory: "Calendar",TopImage: "MoveTrue_Calendar_1")
                                 .tabItem {
                                     VStack{
                                         Image(systemName: "calendar")
