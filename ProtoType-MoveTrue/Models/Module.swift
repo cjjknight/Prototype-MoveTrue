@@ -23,3 +23,16 @@ class Module: Identifiable, Decodable {
     var video: String
     
 }
+
+class User: Identifiable, Decodable {
+    
+    var id:Int
+    var name:String
+    var admin:Bool
+    var fullbody:Bool
+    var flexibility:Bool
+    var seminar:Bool
+    var purchased: [Int]
+    
+}
+

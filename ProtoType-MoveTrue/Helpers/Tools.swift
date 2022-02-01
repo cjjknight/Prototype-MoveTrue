@@ -30,4 +30,20 @@ struct Rational {
         return someDateTime!
     }
     
+    static func doesUserHaveAccess (_ a: ContentModel, _ lessonIndex: Int, _ userIndex: Int) -> Bool {
+    
+    //Admins get full rights
+    if a.users[userIndex].admin == true {return true}
+    
+    // If category matches what the user has access to
+    if a.users[userIndex].fullbody == true && a.modules[lessonIndex].category == "FullBody" {return true}
+    if a.users[userIndex].flexibility == true && a.modules[lessonIndex].category == "Flexibility" {return true}
+    if a.users[userIndex].seminar == true && a.modules[lessonIndex].category == "Seminar" {return true}
+    
+    //If the user bought that lesson in particular
+    if a.users[userIndex].purchased.contains(a.modules[lessonIndex].id) {return true}
+    
+    
+    return false
+    }
 }

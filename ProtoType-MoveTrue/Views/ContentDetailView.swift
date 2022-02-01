@@ -21,6 +21,7 @@ struct ContentDetailView: View {
         
         
         let url = URL(string: Constants.videoHostUrl + (model.modules[index].video ?? ""))
+        let currentUser = Constants.currentUser
         
         ZStack{
             
@@ -33,11 +34,20 @@ struct ContentDetailView: View {
                     Text("") // Spacer Row
 
                 if contentCategory != "Calendar" {
-
-                    // Only show video if we got a valid URL and we're not coming from CalendarView
-                    if url != nil {
-                        VideoPlayer(player: AVPlayer(url: url!))
-                            .cornerRadius(10)
+                    
+                    // Determine whether the user has access
+                    
+                    if Rational.doesUserHaveAccess(model, index, Constants.currentUser){
+                       
+                        
+                                    // Only show video if we got a valid URL and we're not coming from CalendarView
+                                    if url != nil {
+                                        VideoPlayer(player: AVPlayer(url: url!))
+                                            .cornerRadius(10)
+                                    }
+                    }
+                    else {
+                        LockedContentView()
                     }
                 }
                 else {

@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "name": "Jess",
+        "admin": true,
+        "fullbody": true,
+        "flexibility": true,
+        "seminar": true,
+        "purchased": []
+    },
+    {
+        "id": 2,
+        "name": "Anna",
+        "admin": false,
+        "fullbody": false,
+        "flexibility": false,
+        "seminar": true,
+        "purchased": [201,301]
+    },
+    {
+        "id": 3,
+        "name": "Bob",
+        "admin": false,
+        "fullbody": true,
+        "flexibility": true,
+        "seminar": false,
+        "purchased": [101]
+    }
+]

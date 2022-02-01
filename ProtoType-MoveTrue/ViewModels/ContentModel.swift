@@ -11,6 +11,7 @@ class ContentModel: ObservableObject {
     
     //List of Modules
     @Published var modules = [Module]()
+    @Published var users = [User]()
     
     
     // Current module
@@ -34,13 +35,14 @@ class ContentModel: ObservableObject {
     
     
     func getLocalData() {
+     
         
-        //get a url to the json file
-        let jsonUrl = Bundle.main.url(forResource: "data", withExtension: "json")
+        //Pull the Module Data from json into Modules
+        let jsonDataUrl = Bundle.main.url(forResource: "data", withExtension: "json")
         
         do {
             // read the file into a data object
-            let jsonData = try Data(contentsOf: jsonUrl!)
+            let jsonData = try Data(contentsOf: jsonDataUrl!)
             // try to decode the json into an array of modules
             let jsonDecoder = JSONDecoder()
             let modules = try jsonDecoder.decode([Module].self, from: jsonData)
@@ -51,8 +53,32 @@ class ContentModel: ObservableObject {
         }
         catch {
             //TODO log error
-            print("Couldn't parse local data")
+            print("Couldn't parse local data for module")
         }
+        
+        //Pull the User Data from json into users
+        let jsonUserUrl = Bundle.main.url(forResource: "user", withExtension: "json")
+        
+        do {
+            // read the file into a data object
+            let jsonUserData = try Data(contentsOf: jsonUserUrl!)
+            // try to decode the json into an array of modules
+            let jsonUserDecoder = JSONDecoder()
+            let users = try jsonUserDecoder.decode([User].self, from: jsonUserData)
+            
+            // Assign parsed modules to modules propetry
+            self.users = users
+            
+        }
+        catch {
+            //TODO log error
+            print("Couldn't parse local data for users")
+        }
+        
+        
+        
+        
+        
         
         // Parse the style data
         let styleUrl = Bundle.main.url(forResource: "style", withExtension: "html")
