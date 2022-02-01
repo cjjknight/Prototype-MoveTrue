@@ -10,6 +10,7 @@ import SwiftUI
 struct CodeTextView: UIViewRepresentable {
 
     @EnvironmentObject var model: ContentModel
+    var index: Int
  
     
     func makeUIView(context: Context) -> UITextView {
@@ -23,7 +24,7 @@ struct CodeTextView: UIViewRepresentable {
     func updateUIView(_ textView: UIViewType, context: Context) {
         
         // Set the attributed text for the lesson
-        textView.attributedText = model.codeText
+        textView.attributedText = model.addStyling(model.modules[index].description)
         //Scroll back to the top
         textView.scrollRectToVisible(CGRect(x:0, y: 0, width: 1, height: 1), animated: false)
         

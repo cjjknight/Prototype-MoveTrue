@@ -52,7 +52,7 @@ struct ContentDetailView: View {
                     } // Else Close
                 } // Vstack Close
                 // Description
-                CodeTextView()
+                CodeTextView(index: index)
             } // Close VStack
             .ignoresSafeArea()
         }//Close ZStack

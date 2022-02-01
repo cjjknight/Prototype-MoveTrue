@@ -24,7 +24,7 @@ struct WelcomeView: View {
                 
                 MoveTrue_TopImage(TopImage: TopImage)
                 
-                CodeTextView()
+                CodeTextView(index: 0)
                     .padding(.bottom, 110)
                 
                 

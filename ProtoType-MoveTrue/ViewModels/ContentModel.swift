@@ -145,7 +145,7 @@ class ContentModel: ObservableObject {
     
     // MARK: Code Styling
     
-    private func addStyling(_ htmlString: String) -> NSAttributedString {
+     func addStyling(_ htmlString: String) -> NSAttributedString {
         
         var resultString = NSAttributedString()
         var data = Data()
