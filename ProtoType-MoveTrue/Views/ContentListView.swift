@@ -43,7 +43,7 @@ struct ContentListView: View {
                                         
                                         NavigationLink(
                                             destination:
-                                                ContentDetailView(index: index)
+                                                ContentDetailView(index: index, contentCategory: contentCategory)
                                             ,
                                             label: {
                                         ContentViewRow(index: index, contentCategory: contentCategory)
@@ -58,7 +58,7 @@ struct ContentListView: View {
                                     
                                     NavigationLink(
                                         destination:
-                                            Text("TBD")
+                                                ContentDetailView(index: index, contentCategory: contentCategory)
                                         ,
                                         label: {
                                     ContentViewRow(index: index, contentCategory: contentCategory)

@@ -15,6 +15,7 @@ struct ContentViewRow: View {
    
     
     let currentDateTime = Date()
+    var localTimeZoneAbbreviation: String { return TimeZone.current.abbreviation() ?? "" }
     
     var body: some View {
         
@@ -28,26 +29,29 @@ struct ContentViewRow: View {
             
             HStack ( spacing: 30) {
                 
-                Text(String(index+1))
-                    .bold()
+                
+                // Put Image appropriate to Lesson Category
+                if model.modules[index].category == "Seminar" {Image(systemName: "list.bullet")}
+                if model.modules[index].category == "FullBody" {Image(systemName: "figure.walk")}
+                if model.modules[index].category == "Flexibility" {Image(systemName: "figure.wave")}
+                
                 
                 VStack (alignment: .leading){
-                    if contentCategory == "Calendar" {Text(model.modules[index].category + ": " + (model.modules[index].title)).bold()}
+                    if contentCategory == "Calendar" && model.modules[index].category != "Seminar" {Text(model.modules[index].category + ": " + (model.modules[index].title)).bold()}
                     else {Text(model.modules[index].title).bold()}
                     Text(model.modules[index].length)
-                    if model.modules[index].category == "Seminar" {
-                        Text("Description: " + model.modules[index].description)}
+             
                     if contentCategory == "Calendar" {
                         HStack {
                             Text(Rational.converterDateTime(model, index), style: .date)
-                            Text(" at ")
+                            Text("at")
                             Text(Rational.converterDateTime(model, index), style: .time)
-                            Text(model.modules[index].timezone)
+                            Text(String(localTimeZoneAbbreviation))
                         }
                         }
                         
-                    
-               
+                                 
+                                 
                 } // VStack Close
             } // HStack Close
             .padding()
