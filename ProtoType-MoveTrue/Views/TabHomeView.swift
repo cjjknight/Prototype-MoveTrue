@@ -22,35 +22,35 @@ struct TabHomeView: View {
                 ZStack{
                     NavigationView{
                         TabView {
-                            WelcomeView()
+                            WelcomeView(TopImage: "AboutImage_2")
                                 .tabItem {
                                     VStack {
                                         Image(systemName: "star")
                                         Text("Welcome")
                                     }
                                 }
-                            ContentListView(contentCategory: "Seminar")
+                            ContentListView(contentCategory: "Seminar",TopImage: "AboutImage_2")
                                 .tabItem {
                                     VStack{
                                         Image(systemName: "list.bullet")
                                         Text("Seminars")
                                     }
                                 }
-                            ContentListView(contentCategory: "FullBody")
+                            ContentListView(contentCategory: "FullBody",TopImage: "AboutImage_2")
                                 .tabItem {
                                     VStack{
                                         Image(systemName: "figure.walk")
                                         Text("Fullbody")
                                     }
                                 }
-                            ContentListView(contentCategory: "Flexibility")
+                            ContentListView(contentCategory: "Flexibility",TopImage: "AboutImage_2")
                                 .tabItem {
                                     VStack {
                                         Image(systemName: "figure.wave")
                                         Text("Flexibility")
                                     }
                                 }
-                            ContentListView(contentCategory: "Calendar")
+                            ContentListView(contentCategory: "Calendar",TopImage: "AboutImage_2")
                                 .tabItem {
                                     VStack{
                                         Image(systemName: "calendar")

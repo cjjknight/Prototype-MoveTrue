@@ -13,6 +13,7 @@ struct ContentListView: View {
 
     var contentCategory:String
     let currentDateTime = Date()
+    var TopImage:String
     
     var body: some View {
         
@@ -23,8 +24,7 @@ struct ContentListView: View {
             
             VStack{
                 
-                
-
+                MoveTrue_TopImage(TopImage: TopImage)
              
                 ScrollView {
                     
@@ -65,13 +65,7 @@ struct ContentListView: View {
                                         })
                                 }
                             }//ForEach Close
-                            
-                            
-                            
-                            
-                            
-                            
-                            
+
                         } // Close If statement about currentModule exisiting
                     } //Lazy VStack Close
                     .padding()
@@ -79,13 +73,11 @@ struct ContentListView: View {
                     //.navigationBarTitle("Learn \(model.currentModule?.category ?? "")")
                     
                 } //ScrollView Close
-                .zIndex(1)
-                
-                
-                
-                
+                .zIndex(1)            
                 Spacer()
             } // VStack Close
+            .ignoresSafeArea()
+            
         }
     }
 

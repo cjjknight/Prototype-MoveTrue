@@ -9,7 +9,7 @@ import SwiftUI
 import AVKit
 
 struct ContentDetailView: View {
- 
+    
     @EnvironmentObject var model: ContentModel
     
     var index: Int
@@ -21,49 +21,47 @@ struct ContentDetailView: View {
         
         
         let url = URL(string: Constants.videoHostUrl + (model.modules[index].video ?? ""))
-       
+        
         ZStack{
             
             MoveTrueBackground()
             
-        VStack{
-            
-            
-            if contentCategory != "Calendar" {
-                // Only show video if we got a valid URL and we're not coming from CalendarView
-                if url != nil {
-                    VideoPlayer(player: AVPlayer(url: url!))
-                        .cornerRadius(10)
+            VStack{
+                if contentCategory != "Calendar" {
+                    // Only show video if we got a valid URL and we're not coming from CalendarView
+                    if url != nil {
+                        VideoPlayer(player: AVPlayer(url: url!))
+                            .cornerRadius(10)
+                    }
                 }
-            }
-            else {
-                VStack (alignment: .center){
-                    Text(model.modules[index].category + ": " + (model.modules[index].title))
-                        .bold()
-                        .font(.custom("Open Sans", size: 28))
-                    Text(model.modules[index].length)
-                    HStack {
+                else {
+                    VStack (alignment: .center){
+                        Text("") // Spacer Row
+                        Text("") // Spacer Row
+                        if model.modules[index].category != "Seminar" {
+                        Text(model.modules[index].category + ": " + (model.modules[index].title))
+                            .bold()
+                            .font(.custom("Open Sans", size: 28))                  
+                        }
+                        else {
+                            Text((model.modules[index].title))
+                                .bold()
+                                .font(.custom("Open Sans", size: 28))
+                            
+                        }
+                        Text(model.modules[index].length)
+                        HStack {
                             Text(Rational.converterDateTime(model, index), style: .date)
                             Text("at")
                             Text(Rational.converterDateTime(model, index), style: .time)
-                            //Text(localTimeZoneAbbreviation)
+                            Text(localTimeZoneAbbreviation)
                         }
-                    
-                        
-                    
-               
-                } // VStack Close
-            }
-            
-            // Description
-            CodeTextView()
-          
-            
-            
-            
-        } // Close VStack
-        .padding()
-       // .navigationBarTitle(lesson?.title ?? "")
+                    } // VStack Close
+                }
+                // Description
+                CodeTextView()
+            } // Close VStack
+            .ignoresSafeArea()
         }//Close ZStack
     } // Close View
 } //Close ContentDetailView

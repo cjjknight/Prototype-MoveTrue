@@ -24,6 +24,7 @@
 		F0953C3327A84CC000EEA5FA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0953C3227A84CC000EEA5FA /* Constants.swift */; };
 		F0953C3527A8573E00EEA5FA /* MoveTrueBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0953C3427A8573E00EEA5FA /* MoveTrueBackground.swift */; };
 		F0953C3727A87F4B00EEA5FA /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0953C3627A87F4B00EEA5FA /* Tools.swift */; };
+		F0953C3927A8BBA200EEA5FA /* MoveTrue_TopImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0953C3827A8BBA200EEA5FA /* MoveTrue_TopImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		F0953C3227A84CC000EEA5FA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F0953C3427A8573E00EEA5FA /* MoveTrueBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveTrueBackground.swift; sourceTree = "<group>"; };
 		F0953C3627A87F4B00EEA5FA /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		F0953C3827A8BBA200EEA5FA /* MoveTrue_TopImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveTrue_TopImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				F031ED4127A45F0B004E9A58 /* TabHomeView.swift */,
 				F0953C3427A8573E00EEA5FA /* MoveTrueBackground.swift */,
+				F0953C3827A8BBA200EEA5FA /* MoveTrue_TopImage.swift */,
 				F047F98327A61F51007D83E0 /* ContentListView.swift */,
 				F095006127A48EF600F6D1F2 /* WelcomeView.swift */,
 				F095006A27A497B400F6D1F2 /* CodeTextView.swift */,
@@ -233,6 +236,7 @@
 				F031ED4227A45F0B004E9A58 /* TabHomeView.swift in Sources */,
 				F031ED4027A45F0B004E9A58 /* ProtoType_MoveTrueApp.swift in Sources */,
 				F031ED5327A46159004E9A58 /* ContentModel.swift in Sources */,
+				F0953C3927A8BBA200EEA5FA /* MoveTrue_TopImage.swift in Sources */,
 				F0953C3127A84B5F00EEA5FA /* ContentDetailView.swift in Sources */,
 				F0799C4527A7552F009291A3 /* ContentViewRow.swift in Sources */,
 				F047F98227A61E69007D83E0 /* Module.swift in Sources */,

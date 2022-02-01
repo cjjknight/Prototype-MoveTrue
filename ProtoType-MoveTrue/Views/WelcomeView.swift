@@ -12,6 +12,7 @@ import SwiftUI
 struct WelcomeView: View {
     
     @EnvironmentObject var model: ContentModel
+    var TopImage: String
     
     var body: some View {
         
@@ -21,12 +22,7 @@ struct WelcomeView: View {
             
             VStack{
                 
-                Image("AboutImage_2")
-                    .resizable()
-                    .scaledToFit()
-                    .clipped()
-                    .cornerRadius(5)
-                    .border(.black)
+                MoveTrue_TopImage(TopImage: TopImage)
                 
                 CodeTextView()
                     .padding(.bottom, 110)
