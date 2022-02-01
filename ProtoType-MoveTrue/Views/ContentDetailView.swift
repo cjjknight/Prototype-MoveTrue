@@ -31,24 +31,9 @@ struct ContentDetailView: View {
                 VStack (alignment: .center){
                     Text("") // Spacer Row
                     Text("") // Spacer Row
-                    if model.modules[index].category != "Seminar" {
-                    Text(model.modules[index].category + ": " + (model.modules[index].title))
-                        .bold()
-                        .font(.custom("Open Sans", size: 28))
-                    }
-                    else {
-                        Text((model.modules[index].title))
-                            .bold()
-                            .font(.custom("Open Sans", size: 28))
-                        
-                    }
-                
+
                 if contentCategory != "Calendar" {
-                    
-                    
-                    
-                    
-                    
+
                     // Only show video if we got a valid URL and we're not coming from CalendarView
                     if url != nil {
                         VideoPlayer(player: AVPlayer(url: url!))
@@ -63,9 +48,9 @@ struct ContentDetailView: View {
                             Text("at")
                             Text(Rational.converterDateTime(model, index), style: .time)
                             Text(localTimeZoneAbbreviation)
-                        }
-                    } // VStack Close
-                }
+                        } // HStack Close
+                    } // Else Close
+                } // Vstack Close
                 // Description
                 CodeTextView()
             } // Close VStack
