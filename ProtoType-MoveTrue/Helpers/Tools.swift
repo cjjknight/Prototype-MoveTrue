@@ -51,11 +51,11 @@ struct Rational {
     //Function to identify if the user exists
     static func isUserInSystem (_ a: ContentModel, _ userName: String) -> Int {
       
-    
-       
+        for index in 0..<a.users.count  {
+            if userName == a.users[index].name {return index}
+        }
         
-        
-    return 0
+    return 99999
     }
     
     
