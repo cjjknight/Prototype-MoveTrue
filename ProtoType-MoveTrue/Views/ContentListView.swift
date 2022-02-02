@@ -14,6 +14,7 @@ struct ContentListView: View {
     var contentCategory:String
     let currentDateTime = Date()
     var TopImage:String
+    var currentUser:Int
     
     var body: some View {
         
@@ -43,7 +44,7 @@ struct ContentListView: View {
                                         
                                         NavigationLink(
                                             destination:
-                                                ContentDetailView(index: index, contentCategory: contentCategory)
+                                                ContentDetailView(index: index, contentCategory: contentCategory, currentUser: currentUser)
                                             ,
                                             label: {
                                         ContentViewRow(index: index, contentCategory: contentCategory)
@@ -58,7 +59,7 @@ struct ContentListView: View {
                                     
                                     NavigationLink(
                                         destination:
-                                                ContentDetailView(index: index, contentCategory: contentCategory)
+                                                ContentDetailView(index: index, contentCategory: contentCategory, currentUser: currentUser)
                                         ,
                                         label: {
                                     ContentViewRow(index: index, contentCategory: contentCategory)

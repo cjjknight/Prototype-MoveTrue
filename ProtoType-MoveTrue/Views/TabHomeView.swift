@@ -10,6 +10,7 @@ import SwiftUI
 struct TabHomeView: View {
     
     @EnvironmentObject var model: ContentModel
+    var currentUser:Int
     
     var body: some View {
         ZStack{
@@ -18,6 +19,9 @@ struct TabHomeView: View {
             VStack{
                 
                 Image("MoveTrue_Logo")
+                
+                
+                
                 
                 ZStack{
                     NavigationView{
@@ -29,28 +33,28 @@ struct TabHomeView: View {
                                         Text("Welcome")
                                     }
                                 }
-                            ContentListView(contentCategory: "Seminar",TopImage: "MoveTrue_Seminar_1")
+                            ContentListView(contentCategory: "Seminar",TopImage: "MoveTrue_Seminar_1", currentUser: currentUser)
                                 .tabItem {
                                     VStack{
                                         Image(systemName: "list.bullet")
                                         Text("Seminars")
                                     }
                                 }
-                            ContentListView(contentCategory: "FullBody",TopImage: "MoveTrue_FullBody_1")
+                            ContentListView(contentCategory: "FullBody",TopImage: "MoveTrue_FullBody_1", currentUser: currentUser)
                                 .tabItem {
                                     VStack{
                                         Image(systemName: "figure.walk")
                                         Text("Fullbody")
                                     }
                                 }
-                            ContentListView(contentCategory: "Flexibility",TopImage: "MoveTrue_Flexibility_1")
+                            ContentListView(contentCategory: "Flexibility",TopImage: "MoveTrue_Flexibility_1", currentUser: currentUser)
                                 .tabItem {
                                     VStack {
                                         Image(systemName: "figure.wave")
                                         Text("Flexibility")
                                     }
                                 }
-                            ContentListView(contentCategory: "Calendar",TopImage: "MoveTrue_Calendar_1")
+                            ContentListView(contentCategory: "Calendar",TopImage: "MoveTrue_Calendar_1", currentUser: currentUser)
                                 .tabItem {
                                     VStack{
                                         Image(systemName: "calendar")
@@ -68,8 +72,3 @@ struct TabHomeView: View {
     }
 }
 
-struct TabHomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        TabHomeView()
-    }
-}

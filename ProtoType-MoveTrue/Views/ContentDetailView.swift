@@ -16,12 +16,12 @@ struct ContentDetailView: View {
     var contentCategory: String
     let currentDateTime = Date()
     var localTimeZoneAbbreviation: String { return TimeZone.current.abbreviation() ?? "" }
+    var currentUser: Int
     
     var body: some View {
         
         
         let url = URL(string: Constants.videoHostUrl + (model.modules[index].video ?? ""))
-        let currentUser = Constants.currentUser
         
         ZStack{
             
@@ -37,7 +37,7 @@ struct ContentDetailView: View {
                     
                     // Determine whether the user has access
                     
-                    if Rational.doesUserHaveAccess(model, index, Constants.currentUser){
+                    if Rational.doesUserHaveAccess(model, index, currentUser){
                        
                         
                                     // Only show video if we got a valid URL and we're not coming from CalendarView

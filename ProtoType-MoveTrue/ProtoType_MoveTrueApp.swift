@@ -14,7 +14,7 @@ struct ProtoType_MoveTrueApp: App {
             
             
             
-            TabHomeView()
+            TabHomeView(currentUser: 0)
                 .environmentObject(ContentModel())
         }
     }
