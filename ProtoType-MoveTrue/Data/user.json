@@ -2,6 +2,7 @@
     {
         "id": 1,
         "name": "Jess",
+        "password": "Default",
         "admin": true,
         "fullbody": true,
         "flexibility": true,
@@ -11,6 +12,7 @@
     {
         "id": 2,
         "name": "Anna",
+        "password": "Default",
         "admin": false,
         "fullbody": false,
         "flexibility": false,
@@ -20,10 +22,20 @@
     {
         "id": 3,
         "name": "Bob",
+        "password": "Default",
         "admin": false,
         "fullbody": true,
         "flexibility": true,
         "seminar": false,
         "purchased": [101]
-    }
-]
+    },
+    {
+        "id": 4,
+        "name": "Guest",
+        "password": "Default",
+        "admin": false,
+        "fullbody": false,
+        "flexibility": false,
+        "seminar": false,
+        "purchased": []
+    }]

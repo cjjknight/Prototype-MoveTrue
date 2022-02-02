@@ -10,7 +10,11 @@ import SwiftUI
 struct TabHomeView: View {
     
     @EnvironmentObject var model: ContentModel
-    var currentUser:Int
+
+    @State var currentUser = 99999
+    
+    @State var username: String = ""
+    @State var password: String = ""
     
     var body: some View {
         ZStack{
@@ -20,8 +24,36 @@ struct TabHomeView: View {
                 
                 Image("MoveTrue_Logo")
                 
-                
-                
+               
+                if currentUser == 99999 {
+                            TextField("Username", text: $username)
+                                .padding()
+                                .background(.white)
+                                .cornerRadius(5.0)
+                                .padding(.bottom, 20)
+                            SecureField("Password", text: $password)
+                                .padding()
+                                .background(.white)
+                                .cornerRadius(5.0)
+                                .padding(.bottom, 20)
+                    
+                                
+                                Button(action: {
+                                    currentUser = Rational.isUserInSystem(model,username)
+                                    
+                                }) {
+                                    Text("LOGIN")
+                                        .font(.headline)
+                                        .foregroundColor(.white)
+                                        .padding()
+                                        .frame(width: 220, height: 60)
+                                        .background(Color.green)
+                                        .cornerRadius(15.0)
+                                }
+                    
+                    
+                }
+                else {
                 
                 ZStack{
                     NavigationView{
@@ -67,6 +99,7 @@ struct TabHomeView: View {
                     } //NavigationView Close
                     .navigationViewStyle(.stack)
                 }
+            }
             }
         }
     }

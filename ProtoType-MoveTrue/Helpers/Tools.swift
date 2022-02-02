@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import simd
 
 
 struct Rational {
@@ -46,4 +47,17 @@ struct Rational {
     
     return false
     }
+    
+    //Function to identify if the user exists
+    static func isUserInSystem (_ a: ContentModel, _ userName: String) -> Int {
+      
+    
+       
+        
+        
+    return 0
+    }
+    
+    
+    
 }

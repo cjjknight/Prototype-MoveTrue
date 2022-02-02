@@ -28,6 +28,7 @@ class User: Identifiable, Decodable {
     
     var id:Int
     var name:String
+    var password:String
     var admin:Bool
     var fullbody:Bool
     var flexibility:Bool
