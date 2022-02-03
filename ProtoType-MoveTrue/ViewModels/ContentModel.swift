@@ -27,7 +27,8 @@ class ContentModel: ObservableObject {
     init() {
         
         getLocalData()
-       // getRemoteData()
+        getRemoteModuleData()
+        getRemoteUserData()
         codeText = addStyling(modules[0].description)
     }
     
@@ -97,10 +98,10 @@ class ContentModel: ObservableObject {
         }
     }
     
-    func getRemoteData() {
+    func getRemoteModuleData() {
        
         // String path
-        let urlString = "https://cjjknight.github.io/cwc-learningappdata/data2.json"  // [To Be Replaced with proper link]
+        let urlString = Constants.jsonHostUrl + "data.json"  // [To Be Replaced with proper link]
         
        // Create a URL object
         let url = URL(string: urlString)
@@ -132,8 +133,8 @@ class ContentModel: ObservableObject {
                 //Decode
                 let modules = try decoder.decode([Module].self, from: data!)
                 
-                // Appen parsed modules into modules property
-                self.modules += modules
+                // Overwrite parsed modules into modules property
+                self.modules = modules
                 
             }
             catch {
@@ -147,6 +148,61 @@ class ContentModel: ObservableObject {
         
         
     }
+    
+    
+    func getRemoteUserData() {
+       
+        // String path
+        let urlString = Constants.jsonHostUrl + "user.json"  // [To Be Replaced with proper link]
+        
+       // Create a URL object
+        let url = URL(string: urlString)
+        
+        guard url != nil else {
+            // cound't create url
+            return
+        }
+        
+        //create a URLRequest object
+        let request = URLRequest(url: url!)
+        
+        // Get the session and kick off the task
+        let session = URLSession.shared
+        
+        let dataTask = session.dataTask(with: request) { (data, response, error) in
+            
+            // Check if there is an eroor
+            guard error == nil else {
+                // There was an error
+                return
+            }
+            
+            do {
+            
+                // Create json decoder
+                let decoder = JSONDecoder()
+                
+                //Decode
+                let users = try decoder.decode([User].self, from: data!)
+                
+                // Overwrite local users property
+                self.users = users
+                
+            }
+            catch {
+                print("Couldn't parse remote data")
+            }
+            
+        }
+        
+        //Kick off data task
+        dataTask.resume()
+        
+        
+    }
+    
+    
+    
     
     
     

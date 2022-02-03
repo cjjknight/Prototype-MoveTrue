@@ -1,41 +1,12 @@
 [
     {
-        "id": 1,
-        "name": "Jess",
-        "password": "Default",
-        "admin": true,
-        "fullbody": true,
-        "flexibility": true,
-        "seminar": true,
-        "purchased": []
-    },
-    {
-        "id": 2,
-        "name": "Anna",
-        "password": "Default",
-        "admin": false,
-        "fullbody": false,
-        "flexibility": false,
-        "seminar": true,
-        "purchased": [201,301]
-    },
-    {
-        "id": 3,
-        "name": "Bob",
-        "password": "Default",
-        "admin": false,
-        "fullbody": true,
-        "flexibility": true,
-        "seminar": false,
-        "purchased": [101]
-    },
-    {
-        "id": 4,
+        "id": 0,
         "name": "Guest",
-        "password": "Default",
+        "password": "N/A",
         "admin": false,
         "fullbody": false,
         "flexibility": false,
         "seminar": false,
         "purchased": []
-    }]
+    }
+]

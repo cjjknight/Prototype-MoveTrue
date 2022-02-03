@@ -49,11 +49,18 @@ struct Rational {
     }
     
     //Function to identify if the user exists
-    static func isUserInSystem (_ a: ContentModel, _ userName: String) -> Int {
+    static func isUserInSystem (_ a: ContentModel, _ userName: String, _ password: String) -> Int {
       
+        if userName == "Guest" {return 0} //Guest doesn't need password
+        
+        
         for index in 0..<a.users.count  {
-            if userName == a.users[index].name {return index}
+            if userName == a.users[index].name &&
+                password == a.users[index].password {return index}
         }
+        
+        
+        
         
     return 99999
     }

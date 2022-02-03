@@ -39,8 +39,8 @@ struct TabHomeView: View {
                     
                                 
                                 Button(action: {
-                                    currentUser = Rational.isUserInSystem(model,username)
-                                    
+                                    currentUser = Rational.isUserInSystem(model,username,password)
+
                                 }) {
                                     Text("LOGIN")
                                         .font(.headline)
